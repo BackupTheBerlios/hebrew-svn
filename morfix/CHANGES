@@ -1,0 +1,54 @@
+ Morfix Version History
+========================
+
+Version 0.1.9 2005-09-14 (Ofer Waldman [the_duke])
+	* enabled "Enter" key as a quick way of translating 
+	* fixed a bug occuring when a word is not found
+
+Version 0.1.8 2005-02-20 (Omri)
+	* default_font is used now :\
+	* Fixed bug in 'בע"מ' translation, sometimes when the word has '"' in it, "'" quotes are used.
+
+Version 0.1.7 2004-10-01 (Omri)
+	* Vertical scrollbar only shows up when you can scroll down now.
+	* Text is displayed when no matches found. Should have done this sooner :)
+
+Version 0.1.6 2004-10-01 (Ofer Waldman [the_duke])
+	* Added menubar
+	* Added font changing ability
+	* Added "about" window
+	* Added some comments reagrding future changes
+
+Version 0.1.5 2004-09-27 (Omri)
+	* Fixed display order of choices, ordered by choiceid now (translate return value is a a list of tuples: (choice_name, [result, result, result, ...]))
+	* translation_textview isn't editable any longer, thanks Ido.
+	* Using window.show_all() now instead of calling widget.show() for each widget
+	* Stopped using Fixed, started using Table. Window resizing now works! (Thank you Meir!)
+
+Version 0.1.4 2004-09-25 (Omri)
+	* Added ImportError checking for 'gtk', telling the user to install pygtk if module is missing
+	* Changed output format, instead of using a tuple for the string formating, now using %(key)s and formating with a dictionary
+	* Changed translate() return value to one dictionary with choices text as keys, list of translations as values
+	* GUI changes, moved "תרגם" button near the word edit box
+	* Added combo box for selecting choices
+	* Removed seperator, no need for it any longer :)
+
+Version 0.1.3 2004-09-25 (Omri)
+	* Changed window position to center :)
+	* Changed window title
+	* Changed regex for choice, instaid of [^\}]* using [^\}]+ now
+	* Changed regex for choice, keeping group id now too. Also, id group name is 'id' now, choice code group name is 'code'
+	* Changed output format, now displaying the matched word(with multiple choices) and then the list of translations
+	* Added vertical scrollbar for translation_textview
+	* translation_textview is now warpping with gtk.WRAP_WORD
+
+Version 0.1.2 2004-09-24 (Omri)
+	* Fixed handle of multiple word matches
+
+Version 0.1.1 2004-09-24 (Nir Soffer)
+	* Refactor to engine - morfix.py and gtk interface - gtkmorfix.py.
+	* Added tests
+	* Changed charset to cp-1255 (solves Hebrew grammar)
+
+Version 0.1 2004-09-22 (Omri)
+	* First public release
